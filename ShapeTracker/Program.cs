@@ -24,6 +24,19 @@ namespace ShapeTracker
       ConfirmOrEditTriangle(tri);
       DisplayAll();
       RemoveAll();
+
+      Console.WriteLine("Now let's calculate an area of a Rectangle!");
+      Console.WriteLine("Please enter a first side:");
+      string stringSide1 = Console.ReadLine();
+      Console.WriteLine("Please enter a second side:");
+      string stringSide2 = Console.ReadLine();
+      int recLength1 = int.Parse(stringSide1);
+      int recLength2 = int.Parse(stringSide2);
+      Rectangle rec = new Rectangle(recLength1, recLength2);
+      Console.WriteLine("-----------------------------------------");
+      Console.WriteLine("The area of your rectangle is");
+      Console.WriteLine(rec.CalculateArea());
+      Console.WriteLine("Goodbye!");
     }
 
     static void ConfirmOrEditTriangle(Triangle tri)
@@ -90,7 +103,7 @@ namespace ShapeTracker
       }
       else
       {
-        Console.WriteLine("Goodbye!");
+        Console.WriteLine("Let's proceed!");
       }
     }
 
@@ -106,7 +119,7 @@ namespace ShapeTracker
       }
       else
       {
-        Console.WriteLine("Goodbye!");
+        Console.WriteLine("Let's proceed!");
       }
     }
 
