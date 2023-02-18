@@ -16,11 +16,11 @@ namespace ShapeTracker.Tests
     [TestMethod]
     public void RectangleConstructor_CreatesInstanceOfRectangle_Rectangle()
     {
-      Rectangle newRectangle = new Rectangle(2, 3); 
+      Rectangle newRectangle = new Rectangle(2, 3);
       Assert.AreEqual(typeof(Rectangle), newRectangle.GetType());
     }
 
-    
+
     [TestMethod]
     public void GetSide1_ReturnsSide1_Int()
     {
@@ -28,6 +28,15 @@ namespace ShapeTracker.Tests
       Rectangle newRectangle = new Rectangle(length1, 2);
       int result = newRectangle.Side1;
       Assert.AreEqual(length1, result);
+    }
+
+    [TestMethod]
+    public void GetSide1_ReturnsSide2_Int()
+    {
+      int length2 = 2;
+      Rectangle newRectangle = new Rectangle(3, length2);
+      int result = newRectangle.Side2;
+      Assert.AreEqual(length2, result);
     }
 
   }
