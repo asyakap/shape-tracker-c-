@@ -26,7 +26,7 @@ namespace ShapeTracker.Tests
       // Arrange
       int length1 = 3;
       Triangle newTriangle = new Triangle(length1, 2, 8); // Updated!!
-                                                          // Act
+      // Act
       int result = newTriangle.Side1;
       // Assert
       Assert.AreEqual(length1, result);
