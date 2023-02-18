@@ -23,6 +23,7 @@ namespace ShapeTracker
       Triangle tri = new Triangle(length1, length2, length3);
       ConfirmOrEditTriangle(tri);
       DisplayAll();
+      RemoveAll();
     }
 
     static void ConfirmOrEditTriangle(Triangle tri)
@@ -92,5 +93,22 @@ namespace ShapeTracker
         Console.WriteLine("Goodbye!");
       }
     }
+
+    static void RemoveAll()
+    {
+      Console.WriteLine("Would you like to remove triangles created? Please answer with 'yes' or 'no' below");
+      string userAnswer = Console.ReadLine();
+      if (userAnswer == "yes")
+      {
+        Triangle.ClearAll();
+        Console.WriteLine("-----------------------------------------");
+        Console.WriteLine("All of the triangles are deleted");
+      }
+      else
+      {
+        Console.WriteLine("Goodbye!");
+      }
+    }
+
   }
 }
