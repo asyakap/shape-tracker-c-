@@ -65,5 +65,18 @@ namespace ShapeTracker.Tests
       Assert.AreEqual(6, area);
     }
 
+    [TestMethod]
+    public void GetAll_ReturnsAllRectangleInstances_List()
+    {
+      Rectangle rec1 = new Rectangle(2, 2);
+      Rectangle rec2 = new Rectangle(21, 3);
+      Rectangle rec3 = new Rectangle(1, 3);
+      List<Rectangle> expected = new List<Rectangle> { rec1, rec2, rec3 };
+      // Act
+      List<Rectangle> actualRectangles = Rectangle.GetAll();
+      // Assert
+      CollectionAssert.AreEqual(expected, actualRectangles);
+    }
+
   }
 }
